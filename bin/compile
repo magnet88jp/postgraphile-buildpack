@@ -65,8 +65,10 @@ elif test -d $cache_dir/node_modules; then
   cp -r $cache_dir/node_modules $build_dir/
 fi
 
-status "Installing StrongLoop dependencies"
-npm install -g strongloop
+#status "Installing StrongLoop dependencies"
+#npm install -g strongloop
+status "Installing PostGraphile dependencies"
+npm install -g postgraphile
 # Make npm output to STDOUT instead of its default STDERR
 status "Installing dependencies"
 npm install --production 2>&1 | indent
